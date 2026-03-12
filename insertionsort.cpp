@@ -10,13 +10,16 @@ void input (){
         cin >> n;
 
         if (n <= 20){
+            break;
+        }
+        else{
             cout << "\nArray tidak boleh lebih dari 20\n";
         }
     }
     cout << endl;
     cout << "============================================";
     cout << "==========masukkan element array============";
-    cout << "============================================";
+    cout << "============================================" << endl;
 
     for (int i = 0; i < n; i++){
         cout << "data ke-" << (i+1) << ": ";
@@ -38,5 +41,26 @@ void insertionsort()
             arr [j = 1] = arr [j];
             j--;
         }
+        arr[j + 1] = temp;
+        cout << "\nStep" << i << ": ";
+        for (int k = 0; k < n; k++)
+        {
+            cout << arr [k] << " ";
+        }
     }
 }
+
+void display()
+{
+    cout << endl;
+    cout << "\n===================";
+    cout << "\nElement array" << endl;
+    cout << "\n===================" << endl;
+
+    for (int j = 0; j < n; j++)
+    {
+        cout << arr[j] << endl;
+    }
+    cout << endl;
+}
+
